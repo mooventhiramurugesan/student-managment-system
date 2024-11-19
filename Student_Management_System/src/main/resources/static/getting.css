@@ -1,0 +1,22 @@
+            body {
+                background-color: lightblue;
+            }
+            h2{
+              text-align: center;
+            }
+            table {
+                width: 60%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            th {
+                height: 50px;
+            }
+
+            td {
+                text-align: center;
+                height: 30px;
+            }
+            table{
+                background-color: white;
+            }

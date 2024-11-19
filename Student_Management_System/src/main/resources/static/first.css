@@ -1,0 +1,55 @@
+body {
+                background-color: lightblue;
+            }
+
+            input[type=text] {
+                width: 80%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                box-sizing: border-box;
+            }
+
+            label{
+                font-size:30px;
+            }
+
+            form{
+              <!--  text-align:center; -->
+                margin: 100px 0;
+                padding: 80px 500px;
+
+            }
+
+             input[type=submit] {
+                 background-color: #7677d6;
+                 color: white;
+                 padding: 10px 40px;
+                 display: inline-block;
+                 text-align: center;
+                 border-radius: 12px;
+            }
+
+            .head{
+                 padding-top: 50px;
+                 padding-right: 0px;
+                 padding-bottom: 0px;
+                 padding-left: 450px;
+            }
+
+            span{
+                padding-left:30px;
+                font-size:25px;
+                color: blue;
+            }
+
+            .record_link{
+                position: fixed;
+                left: 70%;
+                top: 330px;
+            }
+
+            .delete_link{
+                position: fixed;
+                left: 70%;
+                top: 430px;
+            }

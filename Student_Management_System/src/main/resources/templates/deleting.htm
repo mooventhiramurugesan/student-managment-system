@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:c="">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+
+        <link rel="stylesheet" href="" th:href="@{/css/deleting.css}"/>
+
+    </head>
+
+    <body>
+        <h2>Registered Students Details </h2>
+        <table border="1" id="myTable">
+            <tr>
+                <th>Registration ID</th>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Year</th>
+                <th>Delete</th>
+            </tr>
+
+            <tr th:each="delete : ${deletes}">
+                <td th:text="${delete.regno}">regno</td>
+                <td th:text="${delete.name}">name</td>
+                <td th:text="${delete.dept}">dept</td>
+                <td th:text="${delete.year}">year</td>
+
+                <td>
+                    <button class="student_button" onclick="deleteRow(this)">
+                        <a th:href="@{/welcome/delete/{id}(id=${delete.id})}"
+                           class="btn btn-primary">delete
+                            <i class="fas fa-user-times ml-2"></i>
+                        </a>
+                    </button>
+                </td>
+
+            </tr>
+
+        </table>
+
+        <script>
+            function deleteRow(r) {
+                var i = r.parentNode.parentNode.rowIndex;
+                document.getElementById("myTable").deleteRow(i);
+                return confirm('Are you sure?');
+            }
+        </script>
+
+    </body>
+
+</html>

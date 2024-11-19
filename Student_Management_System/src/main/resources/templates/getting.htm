@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:c="">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+
+        <link rel="stylesheet" href="" th:href="@{/css/getting.css}"/>
+
+    </head>
+
+    <body>
+        <h2>Registered Students Details </h2>
+        <table border="1">
+            <tr>
+                <th>Registration ID</th>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Year</th>
+            </tr>
+
+            <tr th:each="registration : ${registrations}">
+                <td th:text="${registration.regno}">regno</td>
+                <td th:text="${registration.name}">name</td>
+                <td th:text="${registration.dept}">dept</td>
+                <td th:text="${registration.year}">year</td>
+            </tr>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.thymeleaf.org" xmlns:th="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="UTF-8">
+        <link href = "css/styles.css" rel = "stylesheet"/>
+        <title>Registration</title>
+
+        <link rel="stylesheet" href="" th:href="@{/css/first.css}"/>
+
+    </head>
+
+
+    <body>
+
+        <h1 class="head">Student Registration Details</h1>
+
+
+
+        <form action="#" method="post"
+              th:action="@{/welcome/store}" th:object="${registration}">
+
+                <label >Student ID</label><br>
+                <input name="regno" type="text" required><br>
+
+                <label >Name</label><br>
+                <input name="name" type="text"><br>
+
+                <label >Department</label><br>
+                <input name="dept" type="text"><br>
+
+                <label >Year</label><br>
+                <input name="year" type="text"><br><br>
+
+                <input onClick="validation()" type="submit" value="Submit" />
+
+                <a class="record_link"
+                   th:href="@{registration}"><span>Student Records</span>
+                </a><br>
+
+
+                <a class="delete_link"
+                   th:href="@{delete}"><span>Delete Records</span>
+                </a>
+
+        </form>
+
+
+    </body>
+
+</html>
